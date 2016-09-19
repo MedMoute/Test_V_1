@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1060</width>
+    <height>630</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="mainWidget">
+   <property name="font">
+    <font>
+     <family>Courier</family>
+     <stylestrategy>NoAntialias</stylestrategy>
+    </font>
+   </property>
+   <widget class="QFrame" name="windows_bar">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>602</y>
+      <width>1060</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QWidget" name="horizontalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1071</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="0,0,0">
+      <property name="spacing">
+       <number>2</number>
+      </property>
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMinimumSize</enum>
+      </property>
+      <property name="leftMargin">
+       <number>3</number>
+      </property>
+      <property name="rightMargin">
+       <number>3</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="pushButton_7">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>75</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft Sans Serif</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Start</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::MinimumExpanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="timelabel">
+        <property name="minimumSize">
+         <size>
+          <width>66</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QCuDesktopWidget" name="centralWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1060</width>
+      <height>600</height>
+     </rect>
+    </property>
+    <widget class="QDesktopIcon" name="icon_trash" native="true">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>0</y>
+       <width>64</width>
+       <height>80</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDesktopIcon" name="icon_system" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>64</width>
+       <height>80</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDesktopIcon" name="icon_todo" native="true">
+     <property name="geometry">
+      <rect>
+       <x>920</x>
+       <y>80</y>
+       <width>64</width>
+       <height>80</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDesktopIcon" name="icon_hintsfolder" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>240</y>
+       <width>64</width>
+       <height>80</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDesktopIcon" name="icon_notepad" native="true">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>0</y>
+       <width>64</width>
+       <height>80</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDesktopIcon" name="icon_webchat" native="true">
+     <property name="geometry">
+      <rect>
+       <x>990</x>
+       <y>0</y>
+       <width>64</width>
+       <height>80</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDesktopIcon" name="icon_notefolder" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>160</y>
+       <width>64</width>
+       <height>80</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDesktopIcon" name="icon_update" native="true">
+     <property name="geometry">
+      <rect>
+       <x>850</x>
+       <y>80</y>
+       <width>64</width>
+       <height>80</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDesktopIcon" name="icon_help" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>80</y>
+       <width>64</width>
+       <height>80</height>
+      </rect>
+     </property>
+    </widget>
+    <zorder>icon_trash</zorder>
+    <zorder>icon_system</zorder>
+    <zorder>icon_todo</zorder>
+    <zorder>icon_hintsfolder</zorder>
+    <zorder>icon_notepad</zorder>
+    <zorder>icon_webchat</zorder>
+    <zorder>icon_notefolder</zorder>
+    <zorder>icon_update</zorder>
+    <zorder>icon_help</zorder>
+    <zorder>windows_bar</zorder>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QDesktopIcon</class>
+   <extends>QWidget</extends>
+   <header>qdesktopicon.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QCuDesktopWidget</class>
+   <extends>QWidget</extends>
+   <header>qcudesktopwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
