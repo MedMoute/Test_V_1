@@ -22,7 +22,9 @@ SOURCES += main.cpp\
     qcudesktopwidget.cpp \
     explorer.cpp \
     qdraggablewindow.cpp \
-    loginform.cpp
+    loginform.cpp \
+    verticallabel.cpp \
+    qwindowsbar.cpp
 
 HEADERS  += mainwindow.h \
     dosprompt.h \
@@ -31,7 +33,9 @@ HEADERS  += mainwindow.h \
     qcudesktopwidget.h \
     explorer.h \
     qdraggablewindow.h \
-    loginform.h
+    loginform.h \
+    verticallabel.h \
+    qwindowsbar.h
 
 FORMS    += mainwindow.ui \
     dosprompt.ui \

@@ -20,6 +20,10 @@ public:
     Ui::DOSPrompt* getUI(){return ui;}
     int getIDX(){return idx;}
 
+    void InitHelp();
+    void InitUpdating();
+    void InitBatch();
+
 private:
     Ui::DOSPrompt *ui;
     int idx;

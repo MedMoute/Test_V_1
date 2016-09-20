@@ -23,6 +23,8 @@ signals:
 
 private slots:
     void Ok_Clicked();
+    void ClearFields();
+    void NewUser();
 };
 
 #endif // LOGINFORM_H

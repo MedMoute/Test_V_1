@@ -2,6 +2,9 @@
 #include "ui_dosprompt.h"
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+//Qt
+#include<QTextDocument>
+#include<QTextBlock>
 
 //DEBUG
 #include "QDebug"
@@ -49,6 +52,19 @@ DOSPrompt::DOSPrompt(QWidget *parent,int pos) :
     QObject::connect(ui->pushButton_2,SIGNAL(clicked()),this,SLOT(hide()));
     QObject::connect(button,SIGNAL(clicked()),this,SLOT(toggleprompt()));
     QObject::connect(button,SIGNAL(rightClicked()),this,SLOT(toggleprompt()));
+}
+
+void DOSPrompt::InitBatch()
+{
+    qDebug()<<ui->textEdit->document()->blockCount();
+    ui->textEdit->append(">DDOS Batch initializer....\n>");
+    qDebug()<<ui->textEdit->document()->blockCount();
+    ui->textEdit->append(">DDOS Batch initializer....\n>");
+    qDebug()<<ui->textEdit->document()->blockCount();
+    ui->textEdit->append(">DDOS Batch initializer....\nA\n>");
+    qDebug()<<ui->textEdit->document()->blockCount();
+    qDebug()<<ui->textEdit->document()->findBlockByNumber(2).text();
+    ui->textEdit->update();
 }
 
 DOSPrompt::~DOSPrompt()

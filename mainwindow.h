@@ -38,6 +38,7 @@ public slots:
 //    void startSystem();
     void LaunchMainWindow();
 
+    void toggleStartMenu();
 };
 
 #endif // MAINWINDOW_H

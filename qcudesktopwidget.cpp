@@ -8,6 +8,8 @@
 #include "dosprompt.h"
 #include "ui_dosprompt.h"
 
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 
 QCuDesktopWidget::QCuDesktopWidget(QWidget *parent) :
     QWidget(parent)
@@ -17,6 +19,13 @@ QCuDesktopWidget::QCuDesktopWidget(QWidget *parent) :
 
 void QCuDesktopWidget::mousePressEvent(QMouseEvent *event)
 {
+    //A click on desktop has been detected, the Start menu has to be hidden
+    MainWindow* mw_ptr = static_cast<MainWindow*>(this->parent()->parent());
+    //this(CentralWidget)
+    //      ->parent(MainWidget)
+    //          ->parent(MainWindow)
+    mw_ptr->getUI()->MenuBar->hide();
+
     //qDebug()<<"Click on desktop detected";
     QDraggableWindow *child ;
 

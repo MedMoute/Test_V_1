@@ -1,6 +1,10 @@
 #include "qdesktopicon.h"
 #include "QBitmap"
 #include "qrightclickbutton.h"
+
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+
 //DEBUG
 #include "QDebug"
 QDesktopIcon::QDesktopIcon(QWidget *parent) :
@@ -22,7 +26,14 @@ void QDesktopIcon::Init(QString imgpath,QString txt)
 
 void QDesktopIcon::mousePressEvent(QMouseEvent *e)
 {
-//qDebug()<<"Click on icon detected";
+    //A click on an icon has been detected, the Start menu has to be hidden
+    MainWindow* mw_ptr = static_cast<MainWindow*>(this->parent()->parent()->parent());
+    //this(QDesktopIcon)
+    //  ->parent(CentralWidget)
+    //      ->parent(MainWidget)
+    //          ->parent(MainWindow)
+    mw_ptr->getUI()->MenuBar->hide();
+
     int ms_int =button->timer->restart();
     if (ms_int<250)
     {
@@ -37,9 +48,7 @@ void QDesktopIcon::mousePressEvent(QMouseEvent *e)
 
 QDesktopIcon::~QDesktopIcon()
 {
-    delete Buttonimg;
-    delete button;
-    delete label;
+    this->close();
 }
 
 void QDesktopIcon::setIcon(QString string)

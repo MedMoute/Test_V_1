@@ -20,7 +20,7 @@
      <stylestrategy>NoAntialias</stylestrategy>
     </font>
    </property>
-   <widget class="QFrame" name="windows_bar">
+   <widget class="QWindowsBar" name="windows_bar">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -49,18 +49,21 @@
        <number>2</number>
       </property>
       <property name="sizeConstraint">
-       <enum>QLayout::SetMinimumSize</enum>
+       <enum>QLayout::SetDefaultConstraint</enum>
       </property>
       <property name="leftMargin">
+       <number>3</number>
+      </property>
+      <property name="topMargin">
        <number>3</number>
       </property>
       <property name="rightMargin">
        <number>3</number>
       </property>
       <item>
-       <widget class="QPushButton" name="pushButton_7">
+       <widget class="QPushButton" name="pushButton_start">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
@@ -68,7 +71,7 @@
         <property name="minimumSize">
          <size>
           <width>75</width>
-          <height>0</height>
+          <height>20</height>
          </size>
         </property>
         <property name="font">
@@ -120,8 +123,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1060</width>
-      <height>600</height>
+      <width>1061</width>
+      <height>601</height>
      </rect>
     </property>
     <widget class="QDesktopIcon" name="icon_trash" native="true">
@@ -223,7 +226,288 @@
     <zorder>icon_notefolder</zorder>
     <zorder>icon_update</zorder>
     <zorder>icon_help</zorder>
-    <zorder>windows_bar</zorder>
+    <zorder>windows_menu</zorder>
+    <zorder>horizontalLayoutWidget</zorder>
+   </widget>
+   <widget class="QWidget" name="MenuBar" native="true">
+    <property name="geometry">
+     <rect>
+      <x>1</x>
+      <y>387</y>
+      <width>141</width>
+      <height>215</height>
+     </rect>
+    </property>
+    <widget class="QFrame" name="TextFrame">
+     <property name="geometry">
+      <rect>
+       <x>2</x>
+       <y>2</y>
+       <width>24</width>
+       <height>210</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="VerticalLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>-5</x>
+        <y>60</y>
+        <width>31</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft Sans Serif</family>
+        <pointsize>16</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>95</string>
+      </property>
+     </widget>
+     <widget class="VerticalLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>-5</x>
+        <y>90</y>
+        <width>31</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft Sans Serif</family>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Windoors</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="ButtonFrame">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>-3</y>
+       <width>111</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>7</y>
+        <width>121</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="menuVerticalLayout" stretch="0,0,0,0,0,0,0,0">
+       <property name="spacing">
+        <number>1</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="pushButton_prog">
+         <property name="font">
+          <font>
+           <family>Microsoft Sans Serif</family>
+          </font>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Programs         ▶</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_docs">
+         <property name="font">
+          <font>
+           <family>Microsoft Sans Serif</family>
+          </font>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Documents      ▶</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_sett">
+         <property name="font">
+          <font>
+           <family>Microsoft Sans Serif</family>
+          </font>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Settings           ▶</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_find">
+         <property name="font">
+          <font>
+           <family>Microsoft Sans Serif</family>
+          </font>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Find                 ▶</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_help">
+         <property name="font">
+          <font>
+           <family>Microsoft Sans Serif</family>
+          </font>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Help</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_run">
+         <property name="font">
+          <font>
+           <family>Microsoft Sans Serif</family>
+          </font>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Run...</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_shut">
+         <property name="font">
+          <font>
+           <family>Microsoft Sans Serif</family>
+          </font>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Shut Down...</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
    </widget>
   </widget>
  </widget>
@@ -239,6 +523,17 @@
    <class>QCuDesktopWidget</class>
    <extends>QWidget</extends>
    <header>qcudesktopwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>VerticalLabel</class>
+   <extends>QLabel</extends>
+   <header>verticallabel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QWindowsBar</class>
+   <extends>QFrame</extends>
+   <header>qwindowsbar.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

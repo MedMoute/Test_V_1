@@ -1,5 +1,10 @@
 #include "explorer.h"
 #include "ui_explorer.h"
+#include "mainwindow.h"
+
+//DEBUG
+#include "QDebug"
+
 
 Explorer::Explorer(QWidget *parent) :
     QDraggableWindow(parent),
@@ -27,7 +32,13 @@ Explorer::~Explorer()
 
 void Explorer::Init()
 {
-    this->move(150,150);
+    MainWindow* mw_ptr = static_cast<MainWindow*>(this->parent()->parent()->parent());
+    //this(DraggableWindow)
+    //  ->parent(CentralWidget)
+    //      ->parent(MainWidget)
+    //          ->parent(MainWindow)
+    this->setGeometry((200+25*(this->parent()->children().size()-27))%(mw_ptr->size().width()),(100+25*(this->parent()->children().size()-27))%(mw_ptr->size().height()),this->size().width(),this->size().height());
+
     //Setting up stylesheet from root to tree
     ui->wrapper->setStyleSheet("QWidget { background-color : #d4d0c8; }");
     ui->TopPart->setStyleSheet("QFrame { background-color : #d4d0c8; }");
